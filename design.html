@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Websites</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="btn"><i class="fas fa-cog"></i></div>
+
+	<div class="box">
+		<h2>Enter a color</h2>
+		<div class="box-c">
+			<div class="txtb">
+				<input type="text" placeholder="#000000" id="input"></input>
+				<div class="prev"></div>
+			</div>
+			<button class="apply">Apply</button>
+		</div>
+	</div>
+
+	<script>
+		//box saxlamaq ve gostermek
+		$(".btn").click(function() {
+			$(".box").toggleClass("box-show");
+
+		});
+
+		//renglerin onizlenmesi
+		//keyup() tus buraxildiginda gelen funksiya
+		$("#input").keyup(function() {
+			$(".prev").css("background",$("#input").val());
+		});
+
+		//to apply color
+		$(".apply").click(function(){
+			$("body").css("background",$("#input").val());
+		});
+
+
+
+	</script>
+
+</body>
+</html>
