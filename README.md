@@ -1,2 +1,2 @@
 # Colors
-Bu test amaclidir.
+This is CSS colors selector
